@@ -98,7 +98,7 @@ with DAG(
 
     ## step 6: Define the task dependencies
     ## Extract
-    create_table() >> extract_apod  ## Ensure the table is create befor extraction
+    create_table() >> extract_apod  ## Ensure the table is create before extraction
     api_response=extract_apod.output
     ## Transform
     transformed_data=transform_apod_data(api_response)
